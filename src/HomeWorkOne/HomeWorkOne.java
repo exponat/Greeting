@@ -1,3 +1,5 @@
+package HomeWorkOne;
+
 import java.util.Base64;
 import java.util.Scanner;
 
