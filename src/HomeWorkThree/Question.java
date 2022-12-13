@@ -33,11 +33,22 @@ public class Question {
         this.answers.add(answer);
     }
 
+    public ArrayList<Answer> getAnswers() {
+        return answers;
+    }
+
     public void printQuestion(){
         System.out.println("Вопрос № " + getNumber());
         System.out.println(getText());
         for (Answer answer : answers) {
             System.out.println(answer.getNumber() + " " + answer.getText());
+        }
+    }
+    public void print(){
+        System.out.println("Вопрос № " + getNumber());
+        System.out.println(getText());
+        for(int i = 0; i < answers.size(); i++){
+            System.out.println((i + 1) + " " + answers.get(i).getText());
         }
     }
 
