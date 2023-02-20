@@ -38,40 +38,22 @@ public class ProjectWork {
 
   @Test
   public void testPluralPrice() {
-    String rusOne = "1 Рубль";
-    String usOne = "1 Dollar";
-    String ruUsOne = "1 Доллар";
-    String ruChOne = "1 Юань";
-    String ruJpOne = "1 Йена";
+    Assert.assertEquals("1 Рубль", pluralPrice(1, RUS_PLURAL_MONEY));
+    Assert.assertEquals("1 Dollar", pluralPrice(1, US_PLURAL_MONEY));
+    Assert.assertEquals("1 Доллар", pluralPrice(1, RU_US_PLURAL_MONEY));
+    Assert.assertEquals("1 Юань", pluralPrice(1, RU_CH_PLURAL_MONEY));
+    Assert.assertEquals("1 Йена", pluralPrice(1, RU_JP_PLURAL_MONEY));
 
-    String rusMany = "22 Рубля";
-    String usMany = "22 Dollars";
-    String ruUsMany = "22 Доллара";
-    String ruChMany = "22 Юаня";
-    String ruJpMany = "22 Йены";
+    Assert.assertEquals("22 Рубля", pluralPrice(22, RUS_PLURAL_MONEY));
+    Assert.assertEquals("22 Dollars", pluralPrice(22, US_PLURAL_MONEY));
+    Assert.assertEquals("22 Доллара", pluralPrice(22, RU_US_PLURAL_MONEY));
+    Assert.assertEquals("22 Юаня", pluralPrice(22, RU_CH_PLURAL_MONEY));
+    Assert.assertEquals("22 Йены", pluralPrice(22, RU_JP_PLURAL_MONEY));
 
-    String rusManyNext = "356 Рублей";
-    String usManyNext = "356 Dollars";
-    String ruUsManyNext = "356 Долларов";
-    String ruChManyNext = "356 Юаней";
-    String ruJpManyNext = "356 Йен";
-
-    Assert.assertEquals(rusOne, pluralPrice(1, RUS_PLURAL_MONEY));
-    Assert.assertEquals(usOne, pluralPrice(1, US_PLURAL_MONEY));
-    Assert.assertEquals(ruUsOne, pluralPrice(1, RU_US_PLURAL_MONEY));
-    Assert.assertEquals(ruChOne, pluralPrice(1, RU_CH_PLURAL_MONEY));
-    Assert.assertEquals(ruJpOne, pluralPrice(1, RU_JP_PLURAL_MONEY));
-
-    Assert.assertEquals(rusMany, pluralPrice(22, RUS_PLURAL_MONEY));
-    Assert.assertEquals(usMany, pluralPrice(22, US_PLURAL_MONEY));
-    Assert.assertEquals(ruUsMany, pluralPrice(22, RU_US_PLURAL_MONEY));
-    Assert.assertEquals(ruChMany, pluralPrice(22, RU_CH_PLURAL_MONEY));
-    Assert.assertEquals(ruJpMany, pluralPrice(22, RU_JP_PLURAL_MONEY));
-
-    Assert.assertEquals(rusManyNext, pluralPrice(356, RUS_PLURAL_MONEY));
-    Assert.assertEquals(usManyNext, pluralPrice(356, US_PLURAL_MONEY));
-    Assert.assertEquals(ruUsManyNext, pluralPrice(356, RU_US_PLURAL_MONEY));
-    Assert.assertEquals(ruChManyNext, pluralPrice(356, RU_CH_PLURAL_MONEY));
-    Assert.assertEquals(ruJpManyNext, pluralPrice(356, RU_JP_PLURAL_MONEY));
+    Assert.assertEquals("356 Рублей", pluralPrice(356, RUS_PLURAL_MONEY));
+    Assert.assertEquals("356 Dollars", pluralPrice(356, US_PLURAL_MONEY));
+    Assert.assertEquals("356 Долларов", pluralPrice(356, RU_US_PLURAL_MONEY));
+    Assert.assertEquals("356 Юаней", pluralPrice(356, RU_CH_PLURAL_MONEY));
+    Assert.assertEquals("356 Йен", pluralPrice(356, RU_JP_PLURAL_MONEY));
   }
 }
