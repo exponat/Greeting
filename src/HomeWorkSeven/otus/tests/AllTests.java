@@ -10,6 +10,6 @@ public class AllTests {
     new DiceImplTest().testRollFromOneToSix();
     new DiceImplTest().testRollPositiveNumber();
     new GameTest().testPlayGameDraw();
-    new GameTest().testPlayGameWinnerNotNull();
+    new GameTest().testPlayGame();
   }
 }
