@@ -31,5 +31,6 @@ class GameTest {
 
     game.playGame(player1, player2);
     assertEquals(player2, "name2");
+
   }
 }
